@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "debug": "cypress open"
+        "debug": "cypress open",
+        "smoke": "cypress run"
     },
     "devDependencies": {
         "cypress": "3.1.5"
