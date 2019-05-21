@@ -2,12 +2,28 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh '''export PATH=$PATH:/usr/local/bin
+      parallel {
+        stage('Build') {
+          steps {
+            sh '''sleep 60
+
+export PATH=$PATH:/usr/local/bin
 
 npm install
 
 '''
+          }
+        }
+        stage('SequenceRunAfterBuild') {
+          steps {
+            sh '''
+
+echo "run after build, not parallel run"
+
+
+echo "1 minute sleep"'''
+          }
+        }
       }
     }
     stage('Deploy') {
