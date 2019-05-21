@@ -21,7 +21,8 @@ echo "this is a sample example"'''
     }
     stage('Test') {
       steps {
-        sh '''
+        sh '''export PATH=$PATH:/usr/local/bin
+
 npm run smoke'''
       }
     }
