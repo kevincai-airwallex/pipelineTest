@@ -21,7 +21,7 @@ npm install
 echo "run after build, not parallel run"
 
 
-echo "1 minute sleep"'''
+'''
           }
         }
       }
