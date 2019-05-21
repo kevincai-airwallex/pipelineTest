@@ -17,5 +17,10 @@ echo "put your deploy codes here"
 echo "this is a sample example"'''
       }
     }
+    stage('Test') {
+      steps {
+        sh 'yarn debug'
+      }
+    }
   }
 }
