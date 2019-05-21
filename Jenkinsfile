@@ -5,7 +5,9 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            sh '''export PATH=$PATH:/usr/local/bin
+            sh '''sleep 60
+
+export PATH=$PATH:/usr/local/bin
 
 npm install
 
