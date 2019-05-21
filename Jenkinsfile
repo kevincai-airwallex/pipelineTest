@@ -14,7 +14,11 @@ npm install
         }
         stage('SequenceRunAfterBuild') {
           steps {
-            sh 'echo "run after build, not parallel run"'
+            sh '''echo "run after build, not parallel run"
+
+sleep 60
+
+echo "1 minute sleep"'''
           }
         }
       }
