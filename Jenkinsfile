@@ -5,7 +5,9 @@ pipeline {
       steps {
         sh '''export PATH=$PATH:/usr/local/bin
 
-npm install'''
+npm install
+
+'''
       }
     }
     stage('Deploy') {
@@ -19,7 +21,8 @@ echo "this is a sample example"'''
     }
     stage('Test') {
       steps {
-        sh 'yarn debug'
+        sh '''
+npm run smoke'''
       }
     }
   }
