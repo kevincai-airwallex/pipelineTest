@@ -8,5 +8,14 @@ pipeline {
 npm install'''
       }
     }
+    stage('Deploy') {
+      steps {
+        sh '''echo "iTesting remind you:"
+
+echo "put your deploy codes here"
+
+echo "this is a sample example"'''
+      }
+    }
   }
 }
