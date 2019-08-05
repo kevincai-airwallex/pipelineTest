@@ -9,7 +9,7 @@ pipeline {
 
 export PATH=$PATH:/usr/local/bin
 
-npm install
+npm install cypress --save-dev
 
 '''
           }
